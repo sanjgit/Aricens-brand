@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
-import "../index.css";
+import "./Hero.css";
 
 const Hero = () => {
   const canvasRef = useRef(null);
@@ -11,26 +11,37 @@ const Hero = () => {
     const canvas = canvasRef.current;
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, alpha: true });
 
-    renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+    renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
-    
+    renderer.setClearColor(0x000000, 1); // Set background to transparent
+
     const geometry = new THREE.SphereGeometry(5, 32, 32);
-    const material = new THREE.MeshStandardMaterial({ color: 0x4dd0e1 });
+    const material = new THREE.MeshStandardMaterial({
+      color: 0x4dd0e1, 
+      metalness: 0.6,  
+      roughness: 0.1,  
+    });
     const sphere = new THREE.Mesh(geometry, material);
 
     scene.add(sphere);
     camera.position.z = 10;
+    
 
-    const light = new THREE.PointLight(0xffffff, 1, 100);
-    light.position.set(10, 10, 10);
+    const light = new THREE.PointLight(0xffffff, 10, 5000, 1);
+    light.position.set(5, 5, 5);
+    light.castShadow = true;
+    light.shadow.radius = 100;
     scene.add(light);
 
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+    scene.add(ambientLight);
+
     function handleResize() {
-      camera.aspect = canvas.clientWidth / canvas.clientHeight;
+      camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
-      renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+      renderer.setSize(window.innerWidth, window.innerHeight);
     }
 
     window.addEventListener("resize", handleResize);
@@ -44,7 +55,6 @@ const Hero = () => {
 
     animate();
 
-    // Cleanup
     return () => {
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener("resize", handleResize);

@@ -5,20 +5,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle, #0a2540, #1c3d5a, #000); /* Background remains */
+  color: #fff;
+  overflow-x: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: radial-gradient(circle, #0a2540, #1c3d5a, #000);
-  color: #fff;
-  overflow-x: hidden;
 }
 
 header {
@@ -51,41 +48,6 @@ header nav a {
 
 header nav a:hover {
   color: #4dd0e1;
-}
-
-.hero {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.hero-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 10;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  text-shadow: 0 0 10px #4dd0e1;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin: 20px 0;
 }
 
 .cta-buttons {
