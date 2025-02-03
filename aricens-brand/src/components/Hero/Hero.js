@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import "./Hero.css";
+// import HomeImage from "../../../public/assets/Home";
 
 const Hero = () => {
   const canvasRef = useRef(null);
@@ -64,7 +65,7 @@ const Hero = () => {
 
   return (
     <div className="hero" id="home">
-      <canvas className="hero-canvas" ref={canvasRef}></canvas>
+      {/* <canvas className="hero-canvas" ref={canvasRef}></canvas> */}
       <div className="hero-content">
         <h1>Innovating Tomorrow's Technology</h1>
         <p>Your Partner in Advanced IT Solutions</p>

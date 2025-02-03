@@ -1,7 +1,7 @@
 const Header = () => {
     return (
       <header>
-        <div className="logo"><a href="#home">Futuristic IT</a></div>
+        <div className="logo"><a href="#home">AriceNS</a></div>
         <nav>
           <a href="#home">Home</a>
           <a href="#about">About Us</a>
