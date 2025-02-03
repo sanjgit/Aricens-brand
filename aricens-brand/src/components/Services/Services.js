@@ -1,10 +1,10 @@
-import ServiceCard from './ServiceCard';
+import ServiceCard from './ServicesCard/ServiceCard';
 
 const Services = () => {
     const services = [
       { title: "Cloud Solutions", description: "Scalable and secure cloud services for modern businesses." },
       { title: "AI Integration", description: "Revolutionize operations with advanced AI-powered tools." },
-      { title: "Cybersecurity", description: "Protect critical assets with next-gen security solutions." },
+      //{ title: "Cybersecurity", description: "Protect critical assets with next-gen security solutions." },
     ];
   
     return (

@@ -1,4 +1,4 @@
-import CaseStudyCard from "./CaseStudyCard";
+import CaseStudyCard from "./CaseStudiesCard/CaseStudyCard";
 
 const CaseStudies = () => {
     const studies = [
