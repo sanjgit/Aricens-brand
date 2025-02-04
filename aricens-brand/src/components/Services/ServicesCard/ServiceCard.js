@@ -1,3 +1,5 @@
+import "./ServicesCard.css";
+
 const ServiceCard = ({ title, description }) => {
     return (
       <div className="card">

@@ -1,0 +1,103 @@
+/* Fixed Header */
+.header {
+    position: fixed; /* Keeps header fixed */
+    top: 0;
+    left: 0;
+    width: calc(100% - 30px);
+    height: 45px; /* Ensures consistent height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    z-index: 1000; /* Ensures it stays above everything */
+}
+
+/* Prevents content from going under the fixed header */
+body {
+    padding-top: 70px; /* Adjust to match header height */
+}
+
+/* Logo */
+.logo a {
+    font-size: 1.8rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 12px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #00c6ff;
+}
+
+/* Mobile Menu */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 5px 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    /* Hamburger Animation */
+    .bar.open:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .bar.open:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .bar.open:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
