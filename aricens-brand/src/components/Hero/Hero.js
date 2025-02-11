@@ -7,7 +7,7 @@ const Hero = () => {
   <div className="hero-overlay"></div>
   <div className="hero-content">
     <h1>Innovating Tomorrow's Technology</h1>
-    <p>Your Partner in Advanced IT Solutions</p>
+    <p>We deliver cutting-edge IT services, AI-driven insights, and scalable digital transformation for businesses ready to thrive in the digital age.</p>
     <div className="cta-buttons">
       <a href="#services" className="btn">Our Services</a>
       <a href="#contact" className="btn">Get in Touch</a>

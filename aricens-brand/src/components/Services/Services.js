@@ -3,9 +3,12 @@ import "./Services.css";
 
 const Services = () => {
     const services = [
-      { title: "Cloud Solutions", description: "Scalable and secure cloud services for modern businesses." },
-      { title: "AI Integration", description: "Revolutionize operations with advanced AI-powered tools." },
-      //{ title: "Cybersecurity", description: "Protect critical assets with next-gen security solutions." },
+      { title: "Cloud & IT Infrastructure", description: "Build scalable, secure, and resilient IT ecosystems with our cloud solutions and DevOps expertise." },
+      { title: "AI & Machine Learning", description: "Transform your business with intelligent automation, predictive analytics, and AI-driven decision-making." },
+      { title: "Data Analytics & Insights", description: "Turn raw data into actionable intelligence with AI-powered dashboards and real-time analytics." },
+      { title: "Digital Transformation", description: "Reimagine your business processes with cutting-edge tools and technologies designed for the future." },
+      { title: "Maintenance and Support", description: "" },
+      { title: "Automation Testing", description: "" },
     ];
   
     return (
