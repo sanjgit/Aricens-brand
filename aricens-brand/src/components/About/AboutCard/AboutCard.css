@@ -39,7 +39,7 @@
   }
 
 .highlightsContainer {
-    text-align: justify !important;
+    text-align: left !important;
     padding: 5px;
     display: flex;
 }
