@@ -1,0 +1,62 @@
+/* About Card Styling */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-height: auto;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Heading */
+.card h3 {
+    font-size: 1.3rem;
+    color: #4dd0e1;
+    margin-bottom: 10px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; 
+    margin: auto;
+  }
+  
+.team-avatar {
+    width: 60%;
+    height: auto;
+    border-radius: 50%;
+  }
+
+@media (max-width: 480px) {
+    .card {
+        padding: 12px;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 260px) {
+    .card {
+        width: 90%; /* Ensures card fits within the screen */
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .card h3 {
+        font-size: 1rem;
+    }
+}
+
