@@ -4,6 +4,8 @@ import ServiceCard from "../Services/ServicesCard/ServiceCard";
 import AboutCard from "./AboutCard/AboutCard";
 import nandaImage from "../../img/nanda.png";
 import sanjeevImage from "../../img/sanjeev.jpeg";
+import DataService from "../../services/DataService";
+import ExpertiseCard from "./ExpertiseCard/ExpertiseCard";
 
 const About = () => {
 
@@ -17,6 +19,8 @@ const About = () => {
     { name: "Sanjeevkumar Ujjinkopp", role: "", avatar: sanjeevImage }
   ];
 
+  const expertisedAreas = DataService.getExpertisedAreasData();
+console.log(expertisedAreas);
   return (
     <section id="about">
       <h2>About Us</h2>
@@ -25,6 +29,12 @@ const About = () => {
           <ServiceCard key={index} {...about} />
         ))}
       </div>
+
+      <h2>Innovative Solutions for Your Business</h2>
+      <div>
+      <ExpertiseCard data={expertisedAreas}/>
+      </div>
+
       <h2>Meet the Team</h2>
       <div className="aboutus">
         {team.map((t, index) => (
