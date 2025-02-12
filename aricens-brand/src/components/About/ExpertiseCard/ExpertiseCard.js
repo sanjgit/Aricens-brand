@@ -1,6 +1,5 @@
 import "../AboutCard/AboutCard.css";
 import highlightIcon from "../../../img/highlight.svg";
-import { Fragment } from "react";
 
 const ExpertiseCard = ({ data }) => {
     return (
